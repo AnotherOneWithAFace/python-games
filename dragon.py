@@ -38,7 +38,7 @@ def checkCave(chosenCave):
         print("gobbles you down in one bite!")
 
 # defines a repeater function
-playAgain = "yes"
+playAgain = "yes" 
 while playAgain == "yes" or playAgain == "y":
     displayIntro()
 
