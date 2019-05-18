@@ -11,7 +11,7 @@ def displayIntro():
     print("is greedy and hungry, and will eat you on sight.")
     print()
 
-#define the chooseCave function, for choosing a cave
+# define the chooseCave function, for choosing a cave
 def chooseCave():
     cave = ""
     while cave != "1" and cave != "2":
@@ -46,7 +46,7 @@ while playAgain == "yes" or playAgain == "y":
 
     checkCave(caveNumber)
 
-    print("do you want to play again? [yes or no]")
+    print("do you want to play again? [(y)es or (n)o]")
     playAgain = input()
 else:
     print("goodbye!")
