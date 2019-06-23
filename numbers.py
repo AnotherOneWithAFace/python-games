@@ -35,12 +35,13 @@ while guessesTaken < 6:
     guess = int(guess)
 
     guessesTaken = guessesTaken + 1
+    guessesLeft = 6 - guessesTaken
 
     if guess < number:
-        print("Your guess is too low")
+        print("Your guess is too low, you have " + str(guessesLeft) + " guesses left!")
 
     if guess > number:
-        print("Your guess is too high")
+        print("Your guess is too high, you have " + str(guessesLeft) + " guesses left!")
 
     if guess == number:
         break
