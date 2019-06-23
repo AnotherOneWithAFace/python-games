@@ -33,4 +33,4 @@ print("Tell me what your favourite food is\n")
 favfood = input()
 
 # display all this jucy data
-print("You have entered:\n -> Favourite Colo(u)r: " + favcolour +'\n' " -> Favourite Animal: " + favanimal +'\n' " -> Favourite Food: " + favfood +'\n')
+print("You have entered:\n -> Favourite Colour: " + favcolour +'\n' " -> Favourite Animal: " + favanimal +'\n' " -> Favourite Food: " + favfood +'\n')
