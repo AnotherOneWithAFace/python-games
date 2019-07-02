@@ -67,8 +67,9 @@ HANGMANPICS = ['''
 ===============''']
 
 pic = 0
+print(HANGMANPICS[pic])
 while True:
-    pic = pic + 1
+    pic = ++pic
     if pic == 5:
-        break
+        exit()
     print(HANGMANPICS[pic])

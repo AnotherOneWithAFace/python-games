@@ -167,9 +167,12 @@ while True:
             # ask the player if they want to play again (but only if the game is done)
             if gameIsDone:
                 if playAgain():
+                    gameIsDone = False
                     missedLetters = ''
                     correctLetters = ''
-                    gameIsDone = False
                     secretWord = getRandomWord(words)
                 else:
-                    break
+                    gameIsDone = True
+
+            if gameIsDone == True:
+                exit()
