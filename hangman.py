@@ -86,11 +86,12 @@ HANGMANPICS = ['''
 ===============''']
 
 
-words = "ant baboon badger bat bear beaver beetle bird camel cat clam cobra cougar coyote crab crane crow deer dog donkey duck eagle ferret fish fox frog goat goose hawk iguana jackal koala leech lemur lion lizard llama mite mole monkey moose moth mouse mule newt otter owl oyster panda parrot pigeon python quail rabbit ram rat raven rhino salmon seal shark sheep skunk sloth slug snail snake spider squid stork swan tick tiger toad trout turkey turtle wasp weasel whale wolf wombat worm zebra".split()
+words = "ant baboon badger bat bear beaver beetle bird camel cat clam cobra cougar coyote crab crane crow deer dog donkey duck eagle ferret fish fox frog goat goose hawk iguana jackal koala leech lemur lion lizard llama mite mole monkey moose moth mouse mule newt otter owl oyster panda parrot pigeon python quail rabbit ram rat raven rhino salmon seal shark sheep skunk sloth slug snail snake spider squid stork swan tick tiger toad trout turkey turtle wasp weasel whale wolf wombat worm zebra"
 
 def getRandomWord(wordList):
     # this function returns a random string from the passed list of strings
-    wordIndex = random.randint(0, len(wordList) -1)
+    words = wordList.split()
+    wordIndex = random.randint(0, (len(wordList) -1))
     return wordList[wordIndex]
 
 def displayBoard(HANGMANPICS, missedLetters, correctLetters, secretWord):
@@ -99,7 +100,7 @@ def displayBoard(HANGMANPICS, missedLetters, correctLetters, secretWord):
 
     print("Missed Letters:")
     for letter in missedLetters:
-        print(letter)
+        print(str(letter))
     print()
 
     blanks = '_' * len(secretWord)
@@ -116,9 +117,8 @@ def getGuess(alreadyGuessed):
     # Returns the letter the player entered. This function makes sure the player entered a single letter, not something else
     while True:
         print("guesss a letter")
-        guess = input()
-        guess = guess.lower()
-        if len(guess) != 1:
+        guess = input().lower()
+        if len(guess) > 1:
             print("please enter a single letter")
         elif guess in alreadyGuessed:
             print("you have already guessed that letter. Try again")
@@ -128,7 +128,7 @@ def getGuess(alreadyGuessed):
             return guess
 
 def playAgain():# this function returns True if the player wants to play again, otherwise it returns False
-    print("do you want to play again? ([y]es or [n]o)")
+    print("do you want to play again? [(y)es or (n)o]")
     return input().lower().startswith('y')
 
 print("H A N G M A N")
@@ -175,4 +175,5 @@ while True:
                     gameIsDone = True
 
             if gameIsDone == True:
+                print("goodbye!")
                 exit()
