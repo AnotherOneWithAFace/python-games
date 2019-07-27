@@ -20,22 +20,23 @@
 # Xs And Os
 
 import random
+import time
 
 def drawBoard(board):
     # This will print out the board that was passed to it
     # "board" is a list of 10 strings representing a board (ignore index 0)
 
-    print(" | |")
-    print(" " + board[7] + " | " + board[8] + " | " + board[9])
-    print(" | |")
+    print("    |  |")
+    print(" " + board[7] + "  | " + board[8] + "| " + board[9])
+    print("    |  |")
     print("-----------")
-    print(" | |")
-    print(" " + board[4] + " | " + board[5] + " | " + board[6])
-    print(" | |")
+    print("    |  |")
+    print(" " + board[4] + "  | " + board[5] + "| " + board[6])
+    print("    |  |")
     print("-----------")
-    print(" | |")
-    print(" " + board[1] + " | " + board[2] + " | " + board[3])
-    print(" | |")
+    print("    |  |")
+    print(" " + board[1] + "  | " + board[2] + "| " + board[3])
+    print("    |  |")
 
 def inputPlayerLetter():
     # Lets the player type which letter they want to be (either X or O)
